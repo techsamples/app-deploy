@@ -22,3 +22,8 @@ jobs:
           echo "Installing Go dependencies......"
           go mod tidy # Ensure dependencies are resolved
           go mod download
+
+      - name: Run Go tests
+        run: |
+          echo "Running tests....."
+          go test ./... -v
